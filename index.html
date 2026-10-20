@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的软件下载站</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的软件下载站</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,"Microsoft YaHei",sans-serif;
+  background:#f4f6fb;
+  color:#20283a;
+}
+header{
+  background:linear-gradient(135deg,#2563eb,#7048e8);
+  color:white;
+  padding:30px 18px;
+  text-align:center;
+}
+header h1{margin:0 0 12px;font-size:28px}
+header p{margin:0;color:#e8eaff}
+main{max-width:760px;margin:auto;padding:18px}
+input{
+  width:100%;padding:13px 15px;
+  border:1px solid #d9deea;border-radius:12px;
+  font-size:16px;margin-bottom:18px;
+}
+h2{font-size:20px}
+.card{
+  background:white;border-radius:14px;
+  padding:18px;margin:12px 0;
+  box-shadow:0 3px 12px #1725540d;
+}
+.card h3{margin:0 0 10px}
+.card p{color:#687386;line-height:1.7}
+.tag{font-size:12px;color:#315fce}
+.btn{
+  display:inline-block;background:#2563eb;
+  color:white;text-decoration:none;
+  padding:10px 18px;border-radius:9px;
+}
+footer{text-align:center;color:#8a93a5;padding:25px}
+</style>
 </head>
 <body>
+<header>
   <h1>我的软件下载站</h1>
-  <p>欢迎来到我的网站！</p>
-  <h2>软件下载</h2>
-  <p>这里将来会展示软件介绍和下载链接。</p>
+  <p>精选软件 · 方便下载 · 持续更新</p>
+</header>
+<main>
+  <input id="search" placeholder="搜索软件名称..." />
+  <h2>软件列表</h2>
+
+  <section class="card">
+    <h3>软件示例一</h3>
+    <span class="tag">工具软件</span>
+    <p>这里填写软件的功能介绍、版本号和适用设备。</p>
+    <a class="btn" href="#" onclick="return demo()">下载软件</a>
+  </section>
+
+  <section class="card">
+    <h3>软件示例二</h3>
+    <span class="tag">实用工具</span>
+    <p>这里可以介绍软件的主要功能和使用方法。</p>
+    <a class="btn" href="#" onclick="return demo()">下载软件</a>
+  </section>
+</main>
+<footer>本站仅展示软件信息，请使用正版软件。</footer>
+<script>
+function demo(){
+  alert("这是示例按钮，请先配置真实下载链接。");
+  return false;
+}
+document.getElementById("search").addEventListener("input",function(){
+  const q=this.value.toLowerCase();
+  document.querySelectorAll(".card").forEach(function(card){
+    card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
+  });
+});
+</script>
 </body>
 </html>
