@@ -41,6 +41,88 @@ h2{font-size:20px}
   padding:10px 18px;border-radius:9px;
 }
 footer{text-align:center;color:#8a93a5;padding:25px}
+  /* 首页美化 */
+body{
+  background:linear-gradient(180deg,#eef2ff 0%,#f8faff 45%,#f4f6fb 100%);
+  color:#20283a;
+}
+header{
+  padding:42px 18px 38px;
+  background:linear-gradient(135deg,#4338ca 0%,#2563eb 52%,#7c3aed 100%);
+  border-radius:0 0 28px 28px;
+  box-shadow:0 10px 30px #4338ca25;
+}
+header h1{
+  font-size:30px;
+  letter-spacing:1px;
+}
+header p{
+  font-size:14px;
+  line-height:1.8;
+}
+main{
+  max-width:760px;
+  padding:24px 18px;
+}
+input{
+  background:white;
+  border:1px solid #dbe2f0;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 5px 18px #263b8010;
+  outline:none;
+}
+input:focus{
+  border-color:#6366f1;
+  box-shadow:0 0 0 4px #6366f120;
+}
+h2{
+  font-size:21px;
+  margin:12px 0 18px;
+}
+.card{
+  border:1px solid #e8eaf5;
+  border-radius:20px;
+  padding:22px;
+  margin:16px 0;
+  box-shadow:0 8px 26px #263b800d;
+  transition:transform .2s,box-shadow .2s;
+}
+.card h3{
+  font-size:19px;
+  color:#252d49;
+}
+.card p{
+  font-size:14px;
+  line-height:1.8;
+}
+.tag{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#4f46e5;
+  font-weight:bold;
+}
+.btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:12px 20px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#4f46e5,#7c3aed);
+  box-shadow:0 5px 14px #4f46e530;
+  font-weight:bold;
+}
+footer{
+  font-size:13px;
+  line-height:1.8;
+  padding:28px 18px;
+}
+@media(max-width:480px){
+  header h1{font-size:25px}
+  main{padding:20px 14px}
+  .card{padding:18px}
+}
 </style>
 </head>
 <body>
